@@ -124,14 +124,19 @@ const Index = () => {
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-border hover:border-primary/30 hover:bg-primary/5"
+              <a
+                href="https://github.com/Malik-Haziq/zero-boiler"
+                target="blank"
               >
-                <Github className="mr-2 h-4 w-4" />
-                <span>View on GitHub</span>
-              </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-border hover:border-primary/30 hover:bg-primary/5"
+                >
+                  <Github className="mr-2 h-4 w-4" />
+                  <span>View on GitHub</span>
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -229,26 +234,26 @@ const Index = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="glow-primary animate-pulse-glow group">
-              <span>Start Building Now</span>
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-border hover:border-primary/30 hover:bg-primary/5"
-            >
-              <Github className="mr-2 h-4 w-4" />
-              <span>GitHub Repository</span>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-border hover:border-accent/30 hover:bg-accent/5"
-            >
-              <Download className="mr-2 h-4 w-4" />
-              <span>npm Package</span>
-            </Button>
+            <a href="https://github.com/Malik-Haziq/zero-boiler" target="blank">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-border hover:border-primary/30 hover:bg-primary/5"
+              >
+                <Github className="mr-2 h-4 w-4" />
+                <span>GitHub Repository</span>
+              </Button>
+            </a>
+            <a href="https://www.npmjs.com/package/zero-boiler" target="blank">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-border hover:border-primary/30 hover:bg-primary/5"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                <span>npm Package</span>
+              </Button>
+            </a>
           </div>
         </div>
       </section>
