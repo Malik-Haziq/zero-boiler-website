@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Download, Star, Users, Zap } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Download, Star, Users, Zap } from "lucide-react";
 
 interface StatItemProps {
   icon: React.ReactNode;
@@ -9,7 +9,13 @@ interface StatItemProps {
   animate?: boolean;
 }
 
-const StatItem = ({ icon, value, label, suffix = '', animate = true }: StatItemProps) => {
+const StatItem = ({
+  icon,
+  value,
+  label,
+  suffix = "",
+  animate = true,
+}: StatItemProps) => {
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
@@ -38,10 +44,10 @@ const StatItem = ({ icon, value, label, suffix = '', animate = true }: StatItemP
 
   const formatValue = (num: number) => {
     if (num >= 1000000) {
-      return (num / 1000000).toFixed(1) + 'M';
+      return (num / 1000000).toFixed(1) + "M";
     }
     if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'K';
+      return (num / 1000).toFixed(1) + "K";
     }
     return num.toLocaleString();
   };
@@ -52,7 +58,8 @@ const StatItem = ({ icon, value, label, suffix = '', animate = true }: StatItemP
         {icon}
       </div>
       <div className="text-2xl font-bold gradient-text mb-1">
-        {formatValue(displayValue)}{suffix}
+        {formatValue(displayValue)}
+        {suffix}
       </div>
       <div className="text-sm text-muted-foreground">{label}</div>
     </div>
@@ -72,7 +79,7 @@ export const Stats = () => {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById('stats-section');
+    const element = document.getElementById("stats-section");
     if (element) {
       observer.observe(element);
     }
@@ -83,28 +90,28 @@ export const Stats = () => {
   const stats = [
     {
       icon: <Download className="h-8 w-8 text-primary" />,
-      value: 1247,
-      label: 'Weekly Downloads',
-      suffix: ''
+      value: 150,
+      label: "Weekly Downloads",
+      suffix: "",
     },
     {
       icon: <Star className="h-8 w-8 text-accent" />,
-      value: 892,
-      label: 'GitHub Stars',
-      suffix: ''
+      value: 3,
+      label: "GitHub Stars",
+      suffix: "",
     },
     {
       icon: <Users className="h-8 w-8 text-terminal-green" />,
-      value: 3450,
-      label: 'Happy Developers',
-      suffix: ''
+      value: 50,
+      label: "Happy Developers",
+      suffix: "",
     },
     {
       icon: <Zap className="h-8 w-8 text-terminal-yellow" />,
       value: 98,
-      label: 'Time Saved',
-      suffix: '%'
-    }
+      label: "Time Saved",
+      suffix: "%",
+    },
   ];
 
   return (
@@ -126,17 +133,14 @@ export const Stats = () => {
               className="animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <StatItem 
-                {...stat} 
-                animate={isVisible}
-              />
+              <StatItem {...stat} animate={isVisible} />
             </div>
           ))}
         </div>
 
         <div className="text-center mt-12">
           <p className="text-sm text-muted-foreground italic">
-            "Finally, a scaffold that doesn't waste my time with demo cleanup." 
+            "Finally, a scaffold that doesn't waste my time with demo cleanup."
             <span className="text-primary"> - Every Developer Ever</span>
           </p>
         </div>
