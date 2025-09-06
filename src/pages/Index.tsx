@@ -271,23 +271,39 @@ const Index = () => {
             </div>
 
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://github.com/Malik-Haziq/zero-boiler"
+                className="hover:text-primary transition-colors"
+                target="blank"
+              >
                 GitHub
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://www.npmjs.com/package/zero-boiler"
+                className="hover:text-primary transition-colors"
+                target="blank"
+              >
                 npm
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://github.com/Malik-Haziq/zero-boiler/blob/main/README.md"
+                className="hover:text-primary transition-colors"
+                target="blank"
+              >
                 Documentation
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://github.com/Malik-Haziq/zero-boiler/issues"
+                className="hover:text-primary transition-colors"
+                target="blank"
+              >
                 Issues
               </a>
             </div>
           </div>
 
           <div className="mt-8 pt-8 border-t border-border/30 text-center text-sm text-muted-foreground">
-            <p>Built with ❤️ for developers who hate boilerplate</p>
+            <p>&copy; 2025 All rights reserved malikhaziq153@gmail.com</p>
           </div>
         </div>
       </footer>
