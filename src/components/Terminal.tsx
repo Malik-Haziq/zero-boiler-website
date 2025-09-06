@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Copy, Check } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from "react";
+import { Copy, Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface TerminalProps {
   command: string;
@@ -9,13 +9,18 @@ interface TerminalProps {
   className?: string;
 }
 
-export const Terminal = ({ command, animate = false, showCursor = true, className = "" }: TerminalProps) => {
-  const [displayText, setDisplayText] = useState(animate ? '' : command);
+export const Terminal = ({
+  command,
+  animate = false,
+  showCursor = true,
+  className = "",
+}: TerminalProps) => {
+  const [displayText, setDisplayText] = useState(animate ? "" : command);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (!animate) return;
-    
+
     let currentIndex = 0;
     const interval = setInterval(() => {
       if (currentIndex <= command.length) {
@@ -49,18 +54,16 @@ export const Terminal = ({ command, animate = false, showCursor = true, classNam
           className="h-6 px-2 text-xs hover:bg-muted/20"
         >
           {copied ? (
-            <Check className="h-3 w-3 text-primary" />
+            <Check className="h-3 w-3 text-background" />
           ) : (
-            <Copy className="h-3 w-3" />
+            <Copy className="h-3 w-3 text-background" />
           )}
         </Button>
       </div>
       <div className="flex items-center">
         <span className="text-muted-foreground mr-2">$</span>
         <span className="code-command">{displayText}</span>
-        {showCursor && (
-          <span className="cursor-glow"></span>
-        )}
+        {showCursor && <span className="cursor-glow"></span>}
       </div>
     </div>
   );
