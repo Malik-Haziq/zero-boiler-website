@@ -1,5 +1,5 @@
-import { Terminal as TerminalIcon, Settings, Zap } from 'lucide-react';
-import { Terminal } from './Terminal';
+import { Terminal as TerminalIcon, Settings, Zap } from "lucide-react";
+import { Terminal } from "./Terminal";
 
 export const HowItWorks = () => {
   const steps = [
@@ -7,20 +7,22 @@ export const HowItWorks = () => {
       icon: <TerminalIcon className="h-8 w-8 text-primary" />,
       title: "Run the Command",
       description: "Single command to bootstrap your project",
-      command: "npx zero-boiler react my-app"
+      command: "npx zero-boiler react my-app",
     },
     {
-      icon: <Settings className="h-8 w-8 text-accent" />,
+      icon: <Settings className="h-8 w-8 text-primary" />,
       title: "Choose Your Stack",
-      description: "Interactive prompts for TypeScript/JavaScript and Tailwind/Plain CSS",
-      command: "? TypeScript or JavaScript? › TypeScript\n? Styling? › Tailwind CSS"
+      description:
+        "Interactive prompts for TypeScript/JavaScript and Tailwind/Plain CSS",
+      command:
+        "? TypeScript or JavaScript? › TypeScript\n? Styling? › Tailwind CSS",
     },
     {
       icon: <Zap className="h-8 w-8 text-terminal-green" />,
       title: "Start Coding",
       description: "Jump straight into development with zero cleanup",
-      command: "cd my-app && npm run dev"
-    }
+      command: "cd my-app && npm run dev",
+    },
   ];
 
   return (
@@ -47,7 +49,7 @@ export const HowItWorks = () => {
                   {step.icon}
                 </div>
               </div>
-              
+
               <div className="mb-6">
                 <div className="flex justify-center items-center gap-2 mb-2">
                   <span className="text-sm font-mono px-2 py-1 bg-primary/10 text-primary rounded">
@@ -58,7 +60,7 @@ export const HowItWorks = () => {
                 <p className="text-muted-foreground">{step.description}</p>
               </div>
 
-              <Terminal 
+              <Terminal
                 command={step.command}
                 animate={false}
                 showCursor={false}

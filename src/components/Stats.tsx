@@ -95,7 +95,7 @@ export const Stats = () => {
       suffix: "",
     },
     {
-      icon: <Star className="h-8 w-8 text-accent" />,
+      icon: <Star className="h-8 w-8 text-primary" />,
       value: 3,
       label: "GitHub Stars",
       suffix: "",
