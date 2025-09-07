@@ -24,7 +24,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 pt-12 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Animated background grid */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -64,7 +64,7 @@ const Index = () => {
             </p>
 
             {/* Terminal Command */}
-            <div className="mb-12 max-w-2xl mx-auto">
+            <div className="mb-10 max-w-2xl mx-auto">
               <Terminal
                 command="npx zero-boiler react my-app"
                 animate={true}
@@ -73,7 +73,7 @@ const Index = () => {
             </div>
 
             {/* Framework badges */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
               <div className="flex items-center gap-2">
                 <span className="text-sm text-muted-foreground">
                   Supported:
@@ -90,7 +90,7 @@ const Index = () => {
             </div>
 
             {/* Options badges */}
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
               {options.map((option, index) => (
                 <Badge
                   key={index}
@@ -103,14 +103,14 @@ const Index = () => {
             </div>
 
             {/* Stats row */}
-            <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm">
+            <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
               <div className="flex items-center gap-2">
                 <Download className="h-4 w-4 text-primary" />
                 <span className="font-medium">100+</span>
                 <span className="text-muted-foreground">downloads</span>
               </div>
               <div className="flex items-center gap-2">
-                <Code2 className="h-4 w-4 text-accent" />
+                <Code2 className="h-4 w-4 text-primary" />
                 <span className="font-medium">3</span>
                 <span className="text-muted-foreground">GitHub stars</span>
               </div>
